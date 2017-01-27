@@ -32,7 +32,6 @@ y = x['Survived']
 x = pd.concat([x['Pclass'],gender,x['Age'],x['Fare'],x['SibSp'],embarked],axis=1)
 x = normalized(x)
 
-forest = RandomForestClassifier(n_estimators = 10)
 forest = forest.fit(x,y)
 
 n = pd.read_csv('testTitanic.csv')
